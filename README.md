@@ -1,79 +1,78 @@
-# SavourAI
-<img src="assets/image (5).png"  height="auto" width="100%">
-<p align="center">
-  <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter" alt="Flutter"></a>
-  <a href="https://developer.android.com"><img src="https://img.shields.io/badge/Platform-Android-green?logo=android" alt="Android"></a>
-  <a href="https://github.com/Dheeraj-Chintala/Android-Apps/blob/master/savourai/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-</p>
+🍽️ Savour — AI Powered Recipe App
 
+Savour is a modern AI-powered mobile application built using Flutter that enhances the cooking experience through intelligent recipe discovery, interactive assistance, and a clean, visually appealing interface.
 
-SavourAI is a beautiful Flutter application that delivers a dynamic, swipeable feed of random meals using [TheMealDB API](https://www.themealdb.com/api.php). Think of it as a Reels-style food discovery experience, complete with YouTube recipe links, ingredient lists, and more!
+🚀 Features
+🔐 User Authentication (Firebase)
+🍳 Recipe of the Day & Random Recipes
+🔍 Advanced Recipe Search
+🤖 AI Chatbot (LLaMA 3.0 Integration)
+Recipe suggestions
+Cooking modifications
+Nutrition & diet guidance
+📖 Detailed Recipe Pages with Video Tutorials
+❤️ Favorite & Save Recipes
+👤 User Profile Management
+🎨 Modern UI (Glassmorphism + Animations)
+🧠 AI Integration
 
----
+Savour uses LLaMA 3.0 to power an intelligent chatbot that allows users to:
 
+Discover recipes conversationally
+Modify ingredients and steps
+Get dietary and nutritional advice
 
+This transforms the app from a static recipe viewer into an interactive cooking assistant.
 
+🛠️ Tech Stack
+Layer	Technology
+Frontend	Flutter
+Language	Dart
+Backend API	TheMealDB API
+AI Model	LLaMA 3.0
+Auth	Firebase Authentication
+Database	Firebase Firestore
+📱 UI/UX Design
 
-##  Features
--  Personal Assisted Chatbot
--  Reels-like horizontal scrolling of meals
--  Auto-extracted background color from meal image
--  YouTube link integration for each recipe
--  Ingredients and instructions display
--  Infinite scroll with dynamic meal loading
+The app follows a minimalist design philosophy:
 
----
-##  Screenshots
+Clean and distraction-free layout
+Glassmorphism (liquid glass UI)
+Smooth animations and transitions
+Card-based design
+Fully responsive interface
+📂 Project Structure
+lib/
+ ├── core/        # Constants, themes, utilities
+ ├── features/    # Main modules (Auth, Recipes, Chatbot, Profile)
+ ├── widgets/     # Reusable UI components
+⚙️ Installation & Setup
+Clone the repository:
+git clone https://github.com/your-username/savour.git
+Navigate to project:
+cd savour
+Install dependencies:
+flutter pub get
+Setup Firebase:
+Add your google-services.json
+Enable Authentication & Firestore
+Run the app:
+flutter run
+🔗 API Integration
+Recipe Data: TheMealDB API
+AI Responses: LLaMA 3.0
+📊 Future Improvements
+Meal planning calendar
+Voice-based cooking assistant
+Offline recipe storage
+AI image-based ingredient detection
+📄 Documentation
 
-### Detailed recipes and video tutorials
-<div>
-  <img src="assets/screenshots/Screenshot_2025-06-22-10-35-20-41_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-  <img src="assets/screenshots/Screenshot_2025-06-22-10-36-36-80_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-  <img src="assets/screenshots/Screenshot_2025-06-22-10-36-54-52_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-</div>
+Detailed documentation is available in the /docs folder:
 
-### Dynamic Meal Search
-<div>
-        <img src="assets/screenshots/Screenshot_2025-06-22-10-37-40-03_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-      <img src="assets/screenshots/Screenshot_2025-06-22-10-37-24-62_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-            <img src="assets/screenshots/Screenshot_2025-06-22-10-37-55-83_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
+Project Report
+System Architecture
+UI/UX Design
+👨‍💻 Author
 
-</div>
-
-### Assisted Chatbot and Consent Page
-<div>
-          <img src="assets/screenshots/Screenshot_2025-06-22-10-39-03-14_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-                   <img src="assets/screenshots/Screenshot_2025-06-22-10-37-18-67_d5dfbe562baa12eb5597bcff67558a9e.jpg" height="500">
-
-</div>
-
----
-
-##  Tech Stack
-
-- Flutter
-- Dart
-- TheMealDB API
-- palette_generator for dominant image color
-- http for API calls
-
----
-
-##  Direct APK Download 
-<a href="https://github.com/Dheeraj-Chintala/Android-Apps/raw/master/savourai/SavourAI.apk" download>
-  <img src="https://img.shields.io/badge/Download-APK-blue?style=for-the-badge&logo=android" alt="Download APK">
-</a>
-
----
-## OR  Getting Started
-
-1. Clone the repo
-   ```bash
-   git clone https://github.com/Dheeraj-Chintala/Android-Apps.git
-   cd savourai
-2. Get dependencies
-   ```bash
-   flutter pub get
-3. Run
-   ```bash
-   flutter run
+Haseeb Jalil
