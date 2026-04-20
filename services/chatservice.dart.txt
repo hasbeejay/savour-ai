@@ -1,0 +1,183 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:math';
+import 'package:http/http.dart' as http;
+
+class ChefBotService {
+  final String apiKey = " ";
+
+  static DateTime? _lastRequestTime;
+
+  Future<String> sendMessage(String message) async {
+    // Rate limit
+    if (_lastRequestTime != null) {
+      final diff = DateTime.now().difference(_lastRequestTime!).inMilliseconds;
+      if (diff < 1000) {
+        await Future.delayed(Duration(milliseconds: 1000 - diff));
+      }
+    }
+    _lastRequestTime = DateTime.now();
+
+    // 1️⃣ LLM FIRST
+    try {
+      final aiResponse = await;
+      if (aiResponse.trim().isNotEmpty) {
+        return aiResponse;
+      }
+    } catch (_) {}
+
+    // 2️⃣ SMART COOKING FALLBACK
+    return _smartCookingFallback(message);
+  }
+
+  // ================= GROQ =================
+
+  Future<String> _(String message) async {
+    final response = await http.post(
+      Uri.parse('https://api.groq.com/openai/v1/chat/completions'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $apiKey',
+      },
+      body: jsonEncode({
+        "model": "llama3-8b-8192",
+        "temperature": 0.85,
+        "max_tokens": 600,
+        "messages": [
+          {
+            "role": "system",
+            "content": """
+You are ChefBot, an expert cooking assistant.
+
+RULES:
+- Give real recipes and techniques
+- Be detailed but friendly
+- If user asks about food → answer like a chef
+- If casual chat → respond briefly, then offer cooking help
+- Avoid generic filler responses
+"""
+          },
+          {"role": "user", "content": message}
+        ]
+      }),
+    ).timeout(const Duration(seconds: 15));
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      return data['choices'][0]['message']['content'];
+    }
+    throw Exception("LLM failed");
+  }
+
+  // ================= SMART FALLBACK =================
+
+  String _smartCookingFallback(String message) {
+    final lower = message.toLowerCase();
+
+    // GREETING
+    if (_isGreeting(lower)) {
+      return "Hi! 👋 I’m ChefBot. Want a recipe, cooking tips, or meal ideas today?";
+    }
+
+    // RECIPE REQUEST
+    if (_wantsRecipe(lower)) {
+      return _basicRecipe(message);
+    }
+
+    // COOKING TIPS / TECHNIQUE
+    if (_wantsTips(lower)) {
+      return _cookingTips(message);
+    }
+
+    // MEAL IDEAS
+    if (_wantsIdeas(lower)) {
+      return _mealIdeas();
+    }
+
+    // INGREDIENT HELP
+    if (_wantsSubstitute(lower)) {
+      return _substitutes();
+    }
+
+    // DEFAULT (still useful)
+    return "I can help with recipes, cooking techniques, substitutions, or meal planning 🍳\nWhat would you like to cook?";
+  }
+
+  // ================= COOKING LOGIC =================
+
+  String _basicRecipe(String message) {
+    return """
+🍽️ **Simple Cooking Method**
+
+1. Prepare your ingredients.
+2. Heat oil on medium heat.
+3. Season properly (salt, spices).
+4. Cook until done and aromatic.
+5. Taste and adjust seasoning.
+
+Tell me the **exact dish name** (e.g., chicken karahi, pasta, pancakes) and I’ll give you a full recipe.
+""";
+  }
+
+  String _cookingTips(String message) {
+    return """
+👨‍🍳 **Pro Cooking Tips**
+• Taste as you cook
+• Don’t overcrowd the pan
+• Let meat rest after cooking
+• Use fresh spices when possible
+• Control heat, don’t rush
+
+Ask about a **specific food** for targeted tips.
+""";
+  }
+
+  String _mealIdeas() {
+    return """
+🍴 **Meal Ideas**
+• Chicken curry + rice
+• Pasta with garlic & olive oil
+• Omelette + toast
+• Stir-fried vegetables
+• Lentil daal
+
+Tell me your **ingredients** and I’ll suggest meals.
+""";
+  }
+
+  String _substitutes() {
+    return """
+🔄 **Common Substitutions**
+• Butter → Oil / Margarine
+• Milk → Yogurt + water
+• Cream → Milk + butter
+• Egg → Yogurt / mashed banana (baking)
+
+Tell me what ingredient you’re missing.
+""";
+  }
+
+  // ================= INTENT HELPERS =================
+
+  bool _isGreeting(String t) =>
+      t.contains("hi") || t.contains("hello") || t.contains("hey");
+
+  bool _wantsRecipe(String t) =>
+      t.contains("recipe") ||
+          t.contains("how to make") ||
+          t.contains("cook");
+
+  bool _wantsTips(String t) =>
+      t.contains("tips") ||
+          t.contains("how to fry") ||
+          t.contains("how to boil");
+
+  bool _wantsIdeas(String t) =>
+      t.contains("what should i cook") ||
+          t.contains("meal ideas");
+
+  bool _wantsSubstitute(String t) =>
+      t.contains("substitute") ||
+          t.contains("alternative") ||
+          t.contains("replace");
+}
