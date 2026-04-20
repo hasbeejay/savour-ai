@@ -41,3 +41,23 @@ Glassmorphism (liquid glass UI)
 Smooth animations and transitions
 Card-based design
 Fully responsive interface
+
+run
+🔗 API Integration
+Recipe Data: TheMealDB API
+AI Responses: LLaMA 3.0
+📊 Future Improvements
+Meal planning calendar
+Voice-based cooking assistant
+Offline recipe storage
+AI image-based ingredient detection
+📄 Documentation
+
+Detailed documentation is available in the /docs folder:
+
+Project Report
+System Architecture
+UI/UX Design
+👨‍💻 Author
+
+Haseeb Jalil
