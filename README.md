@@ -1,2 +1,43 @@
-# savour-ai
-Savour is an AI-powered Flutter recipe app that combines intelligent cooking assistance, real-time recipe data, and a modern glassmorphism UI to deliver a fast, interactive, and user-friendly culinary experience.
+🍽️ Savour — AI Powered Recipe App
+
+Savour is a modern AI-powered mobile application built using Flutter that enhances the cooking experience through intelligent recipe discovery, interactive assistance, and a clean, visually appealing interface.
+
+🚀 Features
+🔐 User Authentication (Firebase)
+🍳 Recipe of the Day & Random Recipes
+🔍 Advanced Recipe Search
+🤖 AI Chatbot (LLaMA 3.0 Integration)
+Recipe suggestions
+Cooking modifications
+Nutrition & diet guidance
+📖 Detailed Recipe Pages with Video Tutorials
+❤️ Favorite & Save Recipes
+👤 User Profile Management
+🎨 Modern UI (Glassmorphism + Animations)
+🧠 AI Integration
+
+Savour uses LLaMA 3.0 to power an intelligent chatbot that allows users to:
+
+Discover recipes conversationally
+Modify ingredients and steps
+Get dietary and nutritional advice
+
+This transforms the app from a static recipe viewer into an interactive cooking assistant.
+
+🛠️ Tech Stack
+Layer	Technology
+Frontend	Flutter
+Language	Dart
+Backend API	TheMealDB API
+AI Model	LLaMA 3.0
+Auth	Firebase Authentication
+Database	Firebase Firestore
+📱 UI/UX Design
+
+The app follows a minimalist design philosophy:
+
+Clean and distraction-free layout
+Glassmorphism (liquid glass UI)
+Smooth animations and transitions
+Card-based design
+Fully responsive interface
