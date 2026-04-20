@@ -1,0 +1,73 @@
+name: savourai
+description: "Savourai - AI Cooking Assistant & Recipe App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.7.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Design
+  cupertino_icons: ^1.0.8
+  crystal_navigation_bar: ^1.0.4
+  iconly: ^1.0.1
+  glass: ^2.0.0+2
+  lottie: ^3.3.1
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.2
+
+  # Networking & API
+  http: ^1.4.0
+  cached_network_image: ^3.4.1
+
+  # Firebase
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.12.5
+  cloud_firestore: ^4.13.1
+  google_sign_in: ^6.1.5
+
+  # Utilities
+  url_launcher: ^6.3.1
+  package_info_plus: ^8.3.0
+  palette_generator: ^0.3.3+7
+  flutter_dotenv: ^5.2.1
+  connectivity_plus: ^6.1.4
+
+  # Chat & Search
+  flutter_markdown: ^0.7.7+1
+  advanced_search: ^2.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/savourAppLogo.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/savourAppLogo.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - .env
+    - assets/transparentApplogo.png
+    - assets/chatBackground.jpg
+    - assets/appcreator.png
+    - assets/github.png
+    - assets/linkedin.png
+    - assets/instapng.png
+    - assets/ytError.png
+    - assets/cooking.json
+    - assets/noconnection.json
+    - assets/google.png
+    - assets/default_avatar_icon.png

@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "567633879182",
+    "project_id": "savour-ai-app",
+    "storage_bucket": "savour-ai-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567633879182:android:379bf1564a4e4f2587e9df",
+        "android_client_info": {
+          "package_name": "com.example.savourai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567633879182-2nc2ljqajph2rte8naof4p9kb8ldge70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwVaXyrmEaxA5_t2jVLRcgbFRRhudXgPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567633879182-2nc2ljqajph2rte8naof4p9kb8ldge70.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567633879182-5jtf73vcvf34cb16l3o9kaqsp7sh928f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.savourai"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567633879182:android:cf9a170e7414e4dc87e9df",
+        "android_client_info": {
+          "package_name": "com.savourai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567633879182-0bc66h2ofl5kih3ueacdonmq2hl83142.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.savourai",
+            "certificate_hash": "7e7b2856bf70b2ecddfd9827cb5407c21304373f"
+          }
+        },
+        {
+          "client_id": "567633879182-2nc2ljqajph2rte8naof4p9kb8ldge70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwVaXyrmEaxA5_t2jVLRcgbFRRhudXgPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567633879182-2nc2ljqajph2rte8naof4p9kb8ldge70.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567633879182-5jtf73vcvf34cb16l3o9kaqsp7sh928f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.savourai"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567633879182:android:b6c37c25b65bb04987e9df",
+        "android_client_info": {
+          "package_name": "com.savourai.savourai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567633879182-2nc2ljqajph2rte8naof4p9kb8ldge70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwVaXyrmEaxA5_t2jVLRcgbFRRhudXgPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567633879182-2nc2ljqajph2rte8naof4p9kb8ldge70.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567633879182-5jtf73vcvf34cb16l3o9kaqsp7sh928f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.savourai"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
