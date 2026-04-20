@@ -32,32 +32,15 @@ Backend API	TheMealDB API
 AI Model	LLaMA 3.0
 Auth	Firebase Authentication
 Database	Firebase Firestore
+
 📱 UI/UX Design
-
 The app follows a minimalist design philosophy:
-
 Clean and distraction-free layout
 Glassmorphism (liquid glass UI)
 Smooth animations and transitions
 Card-based design
 Fully responsive interface
-📂 Project Structure
-lib/
- ├── core/        # Constants, themes, utilities
- ├── features/    # Main modules (Auth, Recipes, Chatbot, Profile)
- ├── widgets/     # Reusable UI components
-⚙️ Installation & Setup
-Clone the repository:
-git clone https://github.com/your-username/savour.git
-Navigate to project:
-cd savour
-Install dependencies:
-flutter pub get
-Setup Firebase:
-Add your google-services.json
-Enable Authentication & Firestore
-Run the app:
-flutter run
+
 🔗 API Integration
 Recipe Data: TheMealDB API
 AI Responses: LLaMA 3.0
@@ -66,13 +49,12 @@ Meal planning calendar
 Voice-based cooking assistant
 Offline recipe storage
 AI image-based ingredient detection
+
 📄 Documentation
-
-Detailed documentation is available in the /docs folder:
-
+Detailed documentation is available in the folder:
 Project Report
 System Architecture
 UI/UX Design
-👨‍💻 Author
 
+👨‍💻 Author
 Haseeb Jalil
