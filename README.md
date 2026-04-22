@@ -58,3 +58,4 @@ UI/UX Design
 
 👨‍💻 Author
 Haseeb Jalil
+LinkedIn Post: https://www.linkedin.com/posts/hasbeejay_mobilecomputing-flutterdevelopment-aiintegration-activity-7414676126406537216-_f8E?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFPfHccBqn2DpjZmmSltyFr-YXTZa2hcEfQ
